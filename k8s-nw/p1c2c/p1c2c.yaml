@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod1
+spec:
+  containers:
+    - name: c01
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo welcome-to-Pranit; sleep 5; done"]
+    - name: c02
+      image: httpd
+      ports:
+        - containerPort: 80
